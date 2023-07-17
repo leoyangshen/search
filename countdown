@@ -1,0 +1,11 @@
+#!/bin/tcsh
+if ( ! $#argv ) then
+	echo "USAGE: countdown <number>"
+	exit
+endif
+@ start = $argv[1]
+while ( $start > 0 )
+	echo $start\!
+	@ start--
+end
+echo blastoff\!

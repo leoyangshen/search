@@ -1,0 +1,6 @@
+#!/bin/tcsh
+@ start = 200
+while ( $start > 55 )
+ wget http://callieham:killshot@members.bangbros.com/shoots/mcjessica/pictures/mcjessica$start.jpg
+ @ start--
+end

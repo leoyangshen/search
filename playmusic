@@ -1,0 +1,2 @@
+#!/bin/tcsh
+find /usr/local/music/ -name \*.mp3 -exec plaympeg {} \;

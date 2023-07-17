@@ -1,0 +1,2 @@
+#!/bin/tcsh
+java org.apache.derby.tools.sysinfo -cp embedded server client tools $*

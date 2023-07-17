@@ -1,0 +1,2 @@
+#!/bin/tcsh
+java -Dij.driver=org.apache.derby.jdbc.ClientDriver -Dij.protocol=jdbc:derby://${IJ_HOST}:${IJ_PORT}/ -Dij.user=${IJ_USER} -Dij.password=${IJ_PASSWORD} org.apache.derby.tools.ij

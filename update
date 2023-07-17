@@ -1,0 +1,2 @@
+#!/bin/tcsh
+rdate -s nist.netservicesgroup.com && hwclock --systohc

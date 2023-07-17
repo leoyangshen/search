@@ -1,0 +1,23 @@
+#!/bin/tcsh
+if ( ! -d /mnt/cdrom/RedHat ) then
+	echo Please mount the distribution CD first
+	exit
+endif
+if ( ! $#argv ) then
+	echo -n "Enter file to search for: "
+	set input = $<
+else
+	set input = $argv[1]
+endif
+foreach package ( /mnt/cdrom/RedHat/RPMS/*.rpm )
+#	rpm -qpl $package > /tmp/rpmlist
+#	if ( { grep -q $input /tmp/rpmlist } ) then
+	rpm -qpl $package | grep "/$input"'$'
+	if ( ! $status ) then
+		echo -n "The file should be in package: "
+		echo $package 
+		echo -n "Do you wish to continue the search? [y/n] "
+		set cont = $<
+		if ( $cont != 'y' && $cont != 'Y' ) break
+	endif
+end

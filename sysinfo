@@ -1,0 +1,3 @@
+#!/bin/tcsh
+#java org.apache.derby.drda.NetworkServerControl sysinfo $*
+java org.apache.derby.tools.sysinfo

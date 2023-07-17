@@ -1,0 +1,10 @@
+# .tcshrc
+
+# User specific aliases and functions
+
+#alias rm 'rm -i'
+#alias cp 'cp -i'
+#alias mv 'mv -i'
+set savehist=20
+set cdpath = ( /var/www/html/EE/javaeetutorial5/examples /var/www/html/EE/AS/sample/javaee5 /opt/SDK/jdk/db/demo )
+set prompt='[%n@%m %c]# ' 
